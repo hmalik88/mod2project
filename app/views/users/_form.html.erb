@@ -1,0 +1,13 @@
+<%= form_for users_path do |f| %>
+  <ul>
+     <li>
+        <%= f.label :username %>
+        <%= f.text_field :username, autocomplete: :off %>
+     </li>
+     <li>
+       <%= f.label :password %>
+       <%= f.password_field :password %>
+     </li>
+  </ul>
+  <%= f.submit%>
+<% end %>

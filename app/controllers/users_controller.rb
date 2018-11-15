@@ -7,6 +7,13 @@ class UsersController < ApplicationController
  def login
    # @user = User.new
    render :login
+   # <h1>Login</h1>
+   # render :partial => 'form'
+ end
+
+ def register
+   render :partial => 'form'
+   locals: submit 'Register'
  end
 
   def new
@@ -14,7 +21,7 @@ class UsersController < ApplicationController
  end
 
 def create
-  @user = User.create(users_class_params)
+  @user = User.new(params.require(:user).permit(users_class_params))
   @user.save
   redirect_to user_path(@user)
 end
