@@ -1,6 +1,7 @@
 Post.destroy_all
 Comment.destroy_all
 Category.destroy_all
+User.destroy_all
 
 5.times do
   Post.create(title: Faker::Book.title, content: Faker::Lorem.paragraph)
@@ -10,6 +11,9 @@ end
   Comment.create(content: Faker::Lorem.sentence)
 end
 
+5.times do
+  User.create(username: Faker::DragonBall.character, password: Faker::Number.number)
+end
 
 Category.create(name: "Depression")
 Category.create(name: "Anxiety")
