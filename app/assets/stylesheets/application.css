@@ -13,6 +13,3 @@
  *= require_tree .
  *= require_self
  */
-.button_to {
-  display: inline;
-}

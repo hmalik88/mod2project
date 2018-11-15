@@ -1,31 +1,7 @@
-Post.destroy_all
-Comment.destroy_all
-Category.destroy_all
-User.destroy_all
-
-5.times do
-  Post.create(title: Faker::Book.title, content: Faker::Lorem.paragraph)
-end
-
-5.times do
-  Comment.create(content: Faker::Lorem.sentence)
-end
-
-5.times do
-  User.create(username: Faker::DragonBall.character, password: Faker::Number.number)
-end
-
-Category.create(name: "Depression")
-Category.create(name: "Anxiety")
-Category.create(name: "Diet")
-Category.create(name: "Addiction")
-Category.create(name: "Physical Disability")
-Category.create(name: "Phobia")
-Category.create(name: "Suicide")
-Category.create(name: "Romance")
-Category.create(name: "Death")
-Category.create(name: "School")
-Category.create(name: "Work")
-Category.create(name: "Family")
-Category.create(name: "Friends")
-
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)

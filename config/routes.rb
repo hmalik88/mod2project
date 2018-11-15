@@ -11,13 +11,6 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create]
 
-  delete "/sessions", to: "sessions#destroy", as: "session"
-
- resources :posts, except: :destroy
- delete '/posts/:id', to: 'posts#destroy', as: 'destroy_post'
- resources :comments
- resources :users
- resources :categories
-
+ delete "/sessions", to: "sessions#destroy", as: "session"
 
 end
