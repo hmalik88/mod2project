@@ -18,8 +18,8 @@
 <h4>Comments</h4>
 <% if @post.comments != [] %>
   <ol>
-    <%= @post.comments.each do |comment| %>
-      <li><% comment.content %></li>
+    <% @post.comments.each do |comment| %>
+      <li><%= comment.content %></li>
     <% end %>
   </ol>
   <br>
