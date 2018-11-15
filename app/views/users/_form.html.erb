@@ -1,4 +1,5 @@
 <%= form_for users_path do |f| %>
+<h1><%=@page_title%></h1>
   <ul>
      <li>
         <%= f.label :username %>
@@ -9,5 +10,5 @@
        <%= f.password_field :password %>
      </li>
   </ul>
-  <%= f.submit%>
+  <%= f.submit @submit_text%>
 <% end %>
