@@ -1,0 +1,30 @@
+<h1><%= @post.title %></h1>
+
+<%= @post.content %><br>
+<% if @post.categories != [] %>
+<br>
+<ul>
+  <li type="circle">
+  <% @post.categories.each do |category| %>
+    <% if category == @post.categories.last %>
+    <%= category.name %>
+    <% else %>
+    <%= category.name %>,
+    <% end %>
+  <% end %>
+  </li>
+</ul>
+<% end %>
+<h4>Comments</h4>
+<% if @post.comments != [] %>
+  <ol>
+    <%= @post.comments.each do |comment| %>
+      <li><% comment.content %></li>
+    <% end %>
+  </ol>
+  <br>
+<% end %>
+<br>
+<br>
+<%= button_to 'Edit Post', edit_post_path, method: :get %>
+<%= button_to 'Delete Post', destroy_post_path, method: :delete %>
