@@ -8,10 +8,9 @@ def login
  @page_title = " User Login"
  @submit_text = "Login"
  render :partial => 'form'
- redirect_to @post
 end
 
-def new
+def reg
   @user = User.new
   @page_title = " User Registration"
   @submit_text = "Register"

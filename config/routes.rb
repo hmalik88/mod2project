@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/users/login', to: 'users#login'
   post '/users/login', to: 'users#login'
-  get '/users/register', to: 'users#new'
+  get '/users/register', to: 'users#reg'
   post '/users/register', to: 'users#create'
 
   # resources :users, only: [:new, :create]
